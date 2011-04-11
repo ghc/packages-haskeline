@@ -73,7 +73,7 @@ setLocale oldLocale = (maybeWith withCAString) oldLocale $ \loc_p -> do
 
 type NLItem = #type nl_item
 
-foreign import ccall nl_langinfo :: NLItem -> IO CAString
+foreign import ccall nl_langinfo :: NLItem -> IO CString
 
 getCodeset :: IO String
 getCodeset = do
